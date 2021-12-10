@@ -1,0 +1,45 @@
+.App {
+  position: relative;
+  padding: 20px 50px;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+}
+
+.input {
+  display: block;
+  width: 100%;
+}
+.output {
+  display: block;
+  width: 100%;
+  border: 1px solid #333;
+  padding: 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  word-break: break-all;
+  max-height: 484px;
+  overflow-y: scroll;
+}
+
+.textarea {
+  display: block;
+  resize: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.preview {
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
