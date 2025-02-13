@@ -1,8 +1,10 @@
 import { useState, useMemo } from "react";
+import clsx from "clsx";
 import styles from "./App.module.css";
 
 function App() {
   const [code, setCode] = useState<string>("");
+  const [bgColor, setBgColor] = useState<string>("#fafafa");
 
   const encodedCode = useMemo(() => {
     return encodeURIComponent(code.replace(/\r?\n/g, ""));
@@ -26,7 +28,7 @@ function App() {
   };
 
   return (
-    <div className={styles.App}>
+    <div className={clsx(styles.App)} style={{ backgroundColor: bgColor }}>
       <div className={styles.container}>
         <div className={styles.input}>
           <textarea
@@ -49,6 +51,13 @@ function App() {
           backgroundImage: `url('data:image/svg+xml;charset=utf8,${encodedCode}')`,
         }}
       ></div>
+      <div>
+        <input
+          type="color"
+          value={bgColor}
+          onChange={(event) => setBgColor(event.target.value)}
+        />
+      </div>
     </div>
   );
 }

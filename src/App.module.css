@@ -7,22 +7,33 @@
   max-width: 1200px;
   display: flex;
   margin: auto;
+  gap: 20px;
 }
 
 .input {
   display: block;
   width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-height: 484px;
 }
 .output {
   display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   width: 100%;
   border: 1px solid #333;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem;
   box-sizing: border-box;
   cursor: pointer;
   word-break: break-all;
   max-height: 484px;
   overflow-y: scroll;
+  background: #333;
+  color: #fff;
 }
 
 .textarea {
